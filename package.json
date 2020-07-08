@@ -1,0 +1,44 @@
+{
+  "name": "apple-id-client-secret",
+  "version": "1.0.0-alpha.1",
+  "description": "A simple generator for Apple ID client secret JWTs.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "jest --config jestconfig.json",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxschmeling/apple-id-client-secret.git"
+  },
+  "keywords": [
+    "Apple ID",
+    "JWT"
+  ],
+  "author": "Max Schmeling <max@maxschmeling.me> (https://maxschmeling.me)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maxschmeling/apple-id-client-secret/issues"
+  },
+  "homepage": "https://github.com/maxschmeling/apple-id-client-secret#readme",
+  "devDependencies": {
+    "@types/jest": "^26.0.4",
+    "jest": "^26.1.0",
+    "prettier": "^2.0.5",
+    "ts-jest": "^26.1.1",
+    "tslint": "^6.1.2",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.9.6"
+  }
+}
