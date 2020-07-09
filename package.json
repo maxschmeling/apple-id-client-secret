@@ -34,11 +34,15 @@
   "homepage": "https://github.com/maxschmeling/apple-id-client-secret#readme",
   "devDependencies": {
     "@types/jest": "^26.0.4",
+    "@types/jsonwebtoken": "^8.5.0",
     "jest": "^26.1.0",
     "prettier": "^2.0.5",
     "ts-jest": "^26.1.1",
     "tslint": "^6.1.2",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.9.6"
+  },
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1"
   }
 }
